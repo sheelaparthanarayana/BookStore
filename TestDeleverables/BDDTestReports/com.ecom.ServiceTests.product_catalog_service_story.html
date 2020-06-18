@@ -1,0 +1,47 @@
+<div class="story">
+<h1>Ecom Bookstore Story</h1>
+<div class="path">com/ecom/ServiceTests/product_catalog_service_story.story</div>
+<div class="narrative"><h2>Narrative:</h2>
+<div class="element inOrderTo"><span class="keyword inOrderTo">In order to</span> communicate effectively to the business some functionality</div>
+<div class="element asA"><span class="keyword asA">As a</span> development team</div>
+<div class="element iWantTo"><span class="keyword iWantTo">I want to</span> use Behaviour-Driven Development</div>
+</div>
+<div class="scenario">
+<h2>Scenario: A scenario to test all the categories returned</h2>
+<div class="examples">
+<h3>Examples:</h3>
+<div class="step">Given product service is running</div>
+<div class="step">When the service api &lt;providedUrl&gt; is invoked</div>
+<div class="step">Then check the statusCode &lt;statusCode&gt; and the response &lt;response&gt;</div>
+<table>
+<thead>
+<tr>
+<th>providedUrl</th><th>statusCode</th><th>response</th></tr>
+</thead>
+<tbody>
+<tr>
+<td>https://localhost:8060/productCatalog/allCategories</td><td>200</td><td>{&quot;categories&quot;:[&quot;Computers&quot;,&quot;Entertainment&quot;,&quot;History&quot;,&quot;Biography and Memoir&quot;]}</td></tr>
+<tr>
+<td>https://localhost:8060/productCatalog/product/0132350882</td><td>200</td><td>{&quot;books&quot;:[{&quot;bookid&quot;:&quot;0132350882&quot;,&quot;title&quot;:&quot;CLEAN CODE: A HANDBOOK OF AGILE SOFTWARE CRAFTSMANSHIP&quot;,&quot;price&quot;:1599,&quot;author&quot;:&quot;Robert C. Martin&quot;,&quot;category&quot;:&quot;Computers&quot;}]}</td></tr>
+<tr>
+<td>https://localhost:8060/productCatalog/category/Computers</td><td>200</td><td>{&quot;books&quot;:[{&quot;bookid&quot;:&quot;0132350882&quot;,&quot;title&quot;:&quot;CLEAN CODE: A HANDBOOK OF AGILE SOFTWARE CRAFTSMANSHIP&quot;,&quot;price&quot;:1599,&quot;author&quot;:&quot;Robert C. Martin&quot;,&quot;category&quot;:&quot;Computers&quot;},{&quot;bookid&quot;:&quot;1118008189&quot;,&quot;title&quot;:&quot;HTML AND CSS: DESIGN AND BUILD WEBSITES&quot;,&quot;price&quot;:1599,&quot;author&quot;:&quot;Jon Duckett&quot;,&quot;category&quot;:&quot;Computers&quot;}]}</td></tr>
+</tbody>
+</table>
+
+<h3 class="example">Example: {providedUrl=https://localhost:8060/productCatalog/allCategories, statusCode=200, response={&quot;categories&quot;:[&quot;Computers&quot;,&quot;Entertainment&quot;,&quot;History&quot;,&quot;Biography and Memoir&quot;]}}</h3>
+<div class="step successful">Given product service is running</div>
+<div class="step successful">When the service api <span class="step parameter">https://localhost:8060/productCatalog/allCategories</span> is invoked</div>
+<div class="step successful">Then check the statusCode <span class="step parameter">200</span> and the response <span class="step parameter">{&quot;categories&quot;:[&quot;Computers&quot;,&quot;Entertainment&quot;,&quot;History&quot;,&quot;Biography and Memoir&quot;]}</span></div>
+
+<h3 class="example">Example: {providedUrl=https://localhost:8060/productCatalog/product/0132350882, statusCode=200, response={&quot;books&quot;:[{&quot;bookid&quot;:&quot;0132350882&quot;,&quot;title&quot;:&quot;CLEAN CODE: A HANDBOOK OF AGILE SOFTWARE CRAFTSMANSHIP&quot;,&quot;price&quot;:1599,&quot;author&quot;:&quot;Robert C. Martin&quot;,&quot;category&quot;:&quot;Computers&quot;}]}}</h3>
+<div class="step successful">Given product service is running</div>
+<div class="step successful">When the service api <span class="step parameter">https://localhost:8060/productCatalog/product/0132350882</span> is invoked</div>
+<div class="step successful">Then check the statusCode <span class="step parameter">200</span> and the response <span class="step parameter">{&quot;books&quot;:[{&quot;bookid&quot;:&quot;0132350882&quot;,&quot;title&quot;:&quot;CLEAN CODE: A HANDBOOK OF AGILE SOFTWARE CRAFTSMANSHIP&quot;,&quot;price&quot;:1599,&quot;author&quot;:&quot;Robert C. Martin&quot;,&quot;category&quot;:&quot;Computers&quot;}]}</span></div>
+
+<h3 class="example">Example: {providedUrl=https://localhost:8060/productCatalog/category/Computers, statusCode=200, response={&quot;books&quot;:[{&quot;bookid&quot;:&quot;0132350882&quot;,&quot;title&quot;:&quot;CLEAN CODE: A HANDBOOK OF AGILE SOFTWARE CRAFTSMANSHIP&quot;,&quot;price&quot;:1599,&quot;author&quot;:&quot;Robert C. Martin&quot;,&quot;category&quot;:&quot;Computers&quot;},{&quot;bookid&quot;:&quot;1118008189&quot;,&quot;title&quot;:&quot;HTML AND CSS: DESIGN AND BUILD WEBSITES&quot;,&quot;price&quot;:1599,&quot;author&quot;:&quot;Jon Duckett&quot;,&quot;category&quot;:&quot;Computers&quot;}]}}</h3>
+<div class="step successful">Given product service is running</div>
+<div class="step successful">When the service api <span class="step parameter">https://localhost:8060/productCatalog/category/Computers</span> is invoked</div>
+<div class="step successful">Then check the statusCode <span class="step parameter">200</span> and the response <span class="step parameter">{&quot;books&quot;:[{&quot;bookid&quot;:&quot;0132350882&quot;,&quot;title&quot;:&quot;CLEAN CODE: A HANDBOOK OF AGILE SOFTWARE CRAFTSMANSHIP&quot;,&quot;price&quot;:1599,&quot;author&quot;:&quot;Robert C. Martin&quot;,&quot;category&quot;:&quot;Computers&quot;},{&quot;bookid&quot;:&quot;1118008189&quot;,&quot;title&quot;:&quot;HTML AND CSS: DESIGN AND BUILD WEBSITES&quot;,&quot;price&quot;:1599,&quot;author&quot;:&quot;Jon Duckett&quot;,&quot;category&quot;:&quot;Computers&quot;}]}</span></div>
+</div>
+</div>
+</div>

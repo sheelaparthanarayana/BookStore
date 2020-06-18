@@ -1,0 +1,47 @@
+DROP TABLE IF EXISTS BOOK;
+CREATE TABLE BOOK (
+ bookid      VARCHAR(20) NOT NULL,
+ title     VARCHAR(100) NOT NULL,
+ price     INT UNSIGNED NOT NULL,
+ author     VARCHAR(100) NOT NULL,
+ category  ENUM('Biography and Memoir','Business and Finance','Computers', 'Entertainment', 'History', 'Fiction', 'Science Fiction', 'Self-Help', 'Health', 'Science and Nature', 'Poetry') NOT NULL,
+ PRIMARY KEY(bookid)
+) ;
+
+DROP TABLE IF EXISTS ACCOUNT;
+CREATE TABLE `ACCOUNT` (
+  `account_id` varchar(50) NOT NULL,
+  `first_name` varchar(70) NOT NULL,
+  `last_name` varchar(70) DEFAULT NULL,
+  `email` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `billing_info` varchar(255) NOT NULL,
+  `shipping_info` varchar(255) NOT NULL,
+  `phone` varchar(70) NOT NULL,
+  PRIMARY KEY (`account_id`)
+)
+
+
+
+DROP TABLE IF EXISTS PO;
+CREATE TABLE PO(
+  account_id varchar(70) NOT NULL,
+  purchase_id varchar(70) NOT NULL,
+  shipping_info varchar(255) NOT NULL,
+  total_price int(10) NOT NULL,
+  status ENUM('PROCESSED','DENIED','ORDERED') NOT NULL,
+  PRIMARY KEY (purchase_id),
+  FOREIGN KEY (account_id) REFERENCES ACCOUNT(account_id)
+ 
+)
+
+DROP TABLE IF EXISTS POITEM;
+CREATE TABLE POITEM(
+  id varchar(70) NOT NULL,
+  purchase_id varchar(70) NOT NULL,
+  bookid     VARCHAR(20) NOT NULL,
+  PRIMARY KEY (id),
+  FOREIGN KEY (purchase_id) REFERENCES PO(purchase_id) ON DELETE CASCADE,
+  FOREIGN KEY (bookid) REFERENCES BOOK(bookid) ON DELETE CASCADE
+  
+)

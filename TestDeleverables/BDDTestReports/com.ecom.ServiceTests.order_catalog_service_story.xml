@@ -1,0 +1,41 @@
+<story path="com/ecom/ServiceTests/order_catalog_service_story.story" title="Ecom Bookstore Story">
+<narrative keyword="Narrative:">
+  <inOrderTo keyword="In order to">communicate effectively to the business some functionality</inOrderTo>
+  <asA keyword="As a">development team</asA>
+  <iWantTo keyword="I want to">use Behaviour-Driven Development</iWantTo>
+</narrative>
+<scenario keyword="Scenario:" title="A scenario to test all the categories returned">
+<examples keyword="Examples:">
+<step>Given order service is running</step>
+<step>When the service api &lt;providedUrl&gt; is invoked for order service with entity &lt;entity&gt;</step>
+<step>Then check the statusCode &lt;statusCode&gt; match response &lt;response&gt;</step>
+<parameters>
+<names><name>providedUrl</name><name>entity</name><name>statusCode</name><name>response</name></names>
+<values><value>https://localhost:8040/orderProcessService/SignUp</value><value>{&quot;first_name&quot;:&quot;varun&quot;,&quot;last_name&quot;:&quot;hm&quot;,&quot;email&quot;:&quot;email1&quot;,&quot;billing_info&quot;:&quot;1991 st laurent blvd&quot;,&quot;shipping_info&quot;:&quot;1991 st alurent&quot;,&quot;password&quot;:&quot;varun&quot;,&quot;phone&quot;:&quot;9008228318&quot;}]}</value><value>200</value><value></value></values>
+<values><value>https://localhost:8040/orderProcessService/CheckAccount</value><value>{&quot;username&quot;:&quot;varunhm.293@gmail.com&quot;,&quot;password&quot;:&quot;varun&quot;}]}</value><value>200</value><value></value></values>
+<values><value>https://localhost:8040/orderProcessService/createOrder</value><value>{&quot;accountId&quot;:&quot;0789c217-4d13-47a4-9ec6-7707618496bc&quot;,&quot;shipping_info&quot;:&quot; 119 lower street&quot;,&quot;total_price&quot;:100,&quot;status&quot;:&quot;PROCESSED&quot;,&quot;bookIds&quot;:[&quot;1118008189&quot;]}]}</value><value>200</value><value></value></values>
+<values><value>https://localhost:8040/orderProcessService/confirmOrder</value><value>{&quot;purchase_id&quot;:&quot;c12a0b09-e3b1-4782-95e3-8d9d6c8e17a4&quot;,&quot;status&quot;:&quot;ORDERED&quot;}]}</value><value>200</value><value></value></values>
+</parameters>
+
+<example keyword="Example:">{providedUrl=https://localhost:8040/orderProcessService/SignUp, entity={&quot;first_name&quot;:&quot;varun&quot;,&quot;last_name&quot;:&quot;hm&quot;,&quot;email&quot;:&quot;email1&quot;,&quot;billing_info&quot;:&quot;1991 st laurent blvd&quot;,&quot;shipping_info&quot;:&quot;1991 st alurent&quot;,&quot;password&quot;:&quot;varun&quot;,&quot;phone&quot;:&quot;9008228318&quot;}]}, statusCode=200, response=}</example>
+<step outcome="successful">Given order service is running</step>
+<step outcome="successful">When the service api <parameter>https://localhost:8040/orderProcessService/SignUp</parameter> is invoked for order service with entity <parameter>{&quot;first_name&quot;:&quot;varun&quot;,&quot;last_name&quot;:&quot;hm&quot;,&quot;email&quot;:&quot;email1&quot;,&quot;billing_info&quot;:&quot;1991 st laurent blvd&quot;,&quot;shipping_info&quot;:&quot;1991 st alurent&quot;,&quot;password&quot;:&quot;varun&quot;,&quot;phone&quot;:&quot;9008228318&quot;}]}</parameter></step>
+<step outcome="successful">Then check the statusCode <parameter>200</parameter> match response <parameter></parameter></step>
+
+<example keyword="Example:">{providedUrl=https://localhost:8040/orderProcessService/CheckAccount, entity={&quot;username&quot;:&quot;varunhm.293@gmail.com&quot;,&quot;password&quot;:&quot;varun&quot;}]}, statusCode=200, response=}</example>
+<step outcome="successful">Given order service is running</step>
+<step outcome="successful">When the service api <parameter>https://localhost:8040/orderProcessService/CheckAccount</parameter> is invoked for order service with entity <parameter>{&quot;username&quot;:&quot;varunhm.293@gmail.com&quot;,&quot;password&quot;:&quot;varun&quot;}]}</parameter></step>
+<step outcome="successful">Then check the statusCode <parameter>200</parameter> match response <parameter></parameter></step>
+
+<example keyword="Example:">{providedUrl=https://localhost:8040/orderProcessService/createOrder, entity={&quot;accountId&quot;:&quot;0789c217-4d13-47a4-9ec6-7707618496bc&quot;,&quot;shipping_info&quot;:&quot; 119 lower street&quot;,&quot;total_price&quot;:100,&quot;status&quot;:&quot;PROCESSED&quot;,&quot;bookIds&quot;:[&quot;1118008189&quot;]}]}, statusCode=200, response=}</example>
+<step outcome="successful">Given order service is running</step>
+<step outcome="successful">When the service api <parameter>https://localhost:8040/orderProcessService/createOrder</parameter> is invoked for order service with entity <parameter>{&quot;accountId&quot;:&quot;0789c217-4d13-47a4-9ec6-7707618496bc&quot;,&quot;shipping_info&quot;:&quot; 119 lower street&quot;,&quot;total_price&quot;:100,&quot;status&quot;:&quot;PROCESSED&quot;,&quot;bookIds&quot;:[&quot;1118008189&quot;]}]}</parameter></step>
+<step outcome="successful">Then check the statusCode <parameter>200</parameter> match response <parameter></parameter></step>
+
+<example keyword="Example:">{providedUrl=https://localhost:8040/orderProcessService/confirmOrder, entity={&quot;purchase_id&quot;:&quot;c12a0b09-e3b1-4782-95e3-8d9d6c8e17a4&quot;,&quot;status&quot;:&quot;ORDERED&quot;}]}, statusCode=200, response=}</example>
+<step outcome="successful">Given order service is running</step>
+<step outcome="successful">When the service api <parameter>https://localhost:8040/orderProcessService/confirmOrder</parameter> is invoked for order service with entity <parameter>{&quot;purchase_id&quot;:&quot;c12a0b09-e3b1-4782-95e3-8d9d6c8e17a4&quot;,&quot;status&quot;:&quot;ORDERED&quot;}]}</parameter></step>
+<step outcome="successful">Then check the statusCode <parameter>200</parameter> match response <parameter></parameter></step>
+</examples>
+</scenario>
+</story>

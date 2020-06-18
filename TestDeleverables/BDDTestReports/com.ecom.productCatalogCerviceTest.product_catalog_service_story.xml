@@ -1,0 +1,35 @@
+<story path="com/ecom/productCatalogCerviceTest/product_catalog_service_story.story" title="Ecom Bookstore Story">
+<narrative keyword="Narrative:">
+  <inOrderTo keyword="In order to">communicate effectively to the business some functionality</inOrderTo>
+  <asA keyword="As a">development team</asA>
+  <iWantTo keyword="I want to">use Behaviour-Driven Development</iWantTo>
+</narrative>
+<scenario keyword="Scenario:" title="A scenario to test all the categories returned">
+<examples keyword="Examples:">
+<step>Given product service is running</step>
+<step>When the service api &lt;providedUrl&gt; is invoked for getCatagory</step>
+<step>Then check the statusCode &lt;statusCode&gt; and the response &lt;response&gt;</step>
+<parameters>
+<names><name>providedUrl</name><name>statusCode</name><name>response</name></names>
+<values><value>http://localhost:8080/productCatalog/allCategories</value><value>200</value><value>{&quot;categories&quot;:[&quot;Computers&quot;,&quot;Entertainment&quot;,&quot;History&quot;,&quot;Biography and Memoir&quot;]}</value></values>
+<values><value>http://localhost:8080/productCatalog/product/0132350882</value><value>200</value><value>{&quot;books&quot;:[{&quot;bookid&quot;:&quot;0132350882&quot;,&quot;title&quot;:&quot;CLEAN CODE: A HANDBOOK OF AGILE SOFTWARE CRAFTSMANSHIP&quot;,&quot;price&quot;:1599,&quot;author&quot;:&quot;Robert C. Martin&quot;,&quot;category&quot;:&quot;Computers&quot;}]}</value></values>
+<values><value>http://localhost:8080/productCatalog/category/Computers</value><value>200</value><value>{&quot;books&quot;:[{&quot;bookid&quot;:&quot;0132350882&quot;,&quot;title&quot;:&quot;CLEAN CODE: A HANDBOOK OF AGILE SOFTWARE CRAFTSMANSHIP&quot;,&quot;price&quot;:1599,&quot;author&quot;:&quot;Robert C. Martin&quot;,&quot;category&quot;:&quot;Computers&quot;},{&quot;bookid&quot;:&quot;1118008189&quot;,&quot;title&quot;:&quot;HTML AND CSS: DESIGN AND BUILD WEBSITES&quot;,&quot;price&quot;:1599,&quot;author&quot;:&quot;Jon Duckett&quot;,&quot;category&quot;:&quot;Computers&quot;}]}</value></values>
+</parameters>
+
+<example keyword="Example:">{providedUrl=http://localhost:8080/productCatalog/allCategories, statusCode=200, response={&quot;categories&quot;:[&quot;Computers&quot;,&quot;Entertainment&quot;,&quot;History&quot;,&quot;Biography and Memoir&quot;]}}</example>
+<step outcome="successful">Given product service is running</step>
+<step outcome="successful">When the service api <parameter>http://localhost:8080/productCatalog/allCategories</parameter> is invoked for getCatagory</step>
+<step outcome="successful">Then check the statusCode <parameter>200</parameter> and the response <parameter>{&quot;categories&quot;:[&quot;Computers&quot;,&quot;Entertainment&quot;,&quot;History&quot;,&quot;Biography and Memoir&quot;]}</parameter></step>
+
+<example keyword="Example:">{providedUrl=http://localhost:8080/productCatalog/product/0132350882, statusCode=200, response={&quot;books&quot;:[{&quot;bookid&quot;:&quot;0132350882&quot;,&quot;title&quot;:&quot;CLEAN CODE: A HANDBOOK OF AGILE SOFTWARE CRAFTSMANSHIP&quot;,&quot;price&quot;:1599,&quot;author&quot;:&quot;Robert C. Martin&quot;,&quot;category&quot;:&quot;Computers&quot;}]}}</example>
+<step outcome="successful">Given product service is running</step>
+<step outcome="successful">When the service api <parameter>http://localhost:8080/productCatalog/product/0132350882</parameter> is invoked for getCatagory</step>
+<step outcome="successful">Then check the statusCode <parameter>200</parameter> and the response <parameter>{&quot;books&quot;:[{&quot;bookid&quot;:&quot;0132350882&quot;,&quot;title&quot;:&quot;CLEAN CODE: A HANDBOOK OF AGILE SOFTWARE CRAFTSMANSHIP&quot;,&quot;price&quot;:1599,&quot;author&quot;:&quot;Robert C. Martin&quot;,&quot;category&quot;:&quot;Computers&quot;}]}</parameter></step>
+
+<example keyword="Example:">{providedUrl=http://localhost:8080/productCatalog/category/Computers, statusCode=200, response={&quot;books&quot;:[{&quot;bookid&quot;:&quot;0132350882&quot;,&quot;title&quot;:&quot;CLEAN CODE: A HANDBOOK OF AGILE SOFTWARE CRAFTSMANSHIP&quot;,&quot;price&quot;:1599,&quot;author&quot;:&quot;Robert C. Martin&quot;,&quot;category&quot;:&quot;Computers&quot;},{&quot;bookid&quot;:&quot;1118008189&quot;,&quot;title&quot;:&quot;HTML AND CSS: DESIGN AND BUILD WEBSITES&quot;,&quot;price&quot;:1599,&quot;author&quot;:&quot;Jon Duckett&quot;,&quot;category&quot;:&quot;Computers&quot;}]}}</example>
+<step outcome="successful">Given product service is running</step>
+<step outcome="successful">When the service api <parameter>http://localhost:8080/productCatalog/category/Computers</parameter> is invoked for getCatagory</step>
+<step outcome="successful">Then check the statusCode <parameter>200</parameter> and the response <parameter>{&quot;books&quot;:[{&quot;bookid&quot;:&quot;0132350882&quot;,&quot;title&quot;:&quot;CLEAN CODE: A HANDBOOK OF AGILE SOFTWARE CRAFTSMANSHIP&quot;,&quot;price&quot;:1599,&quot;author&quot;:&quot;Robert C. Martin&quot;,&quot;category&quot;:&quot;Computers&quot;},{&quot;bookid&quot;:&quot;1118008189&quot;,&quot;title&quot;:&quot;HTML AND CSS: DESIGN AND BUILD WEBSITES&quot;,&quot;price&quot;:1599,&quot;author&quot;:&quot;Jon Duckett&quot;,&quot;category&quot;:&quot;Computers&quot;}]}</parameter></step>
+</examples>
+</scenario>
+</story>

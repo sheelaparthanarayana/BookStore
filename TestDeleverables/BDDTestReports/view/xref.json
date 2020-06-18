@@ -1,0 +1,33 @@
+{"xref": {
+  "whenMade": 1540769027709,
+  "createdBy": "JBehave",
+  "metaFilter": "-skip -ignore",
+  "meta": [],
+  "stories": [
+    {
+      "description": "Ecom Bookstore Story",
+      "narrative": "In order to communicate effectively to the business some functionality\u000aAs a development team\u000aI want to use Behaviour-Driven Development\u000a",
+      "name": "product_catalog_service_story.story",
+      "path": "com/ecom/ServiceTests/product_catalog_service_story.story",
+      "html": "com.ecom.ServiceTests.product_catalog_service_story.html",
+      "meta": "",
+      "scenarios": "Scenario:A scenario to test all the categories returned\u000aGiven product service is running\u000aWhen the service api <providedUrl> is invoked\u000aThen check the statusCode <statusCode> and the response <response>\u000a\u000a\u000a",
+      "passed": true,
+      "started": 1540769024466,
+      "duration": 1513
+    },
+    {
+      "description": "Ecom Bookstore Story",
+      "narrative": "In order to communicate effectively to the business some functionality\u000aAs a development team\u000aI want to use Behaviour-Driven Development\u000a",
+      "name": "order_catalog_service_story.story",
+      "path": "com/ecom/ServiceTests/order_catalog_service_story.story",
+      "html": "com.ecom.ServiceTests.order_catalog_service_story.html",
+      "meta": "",
+      "scenarios": "Scenario:A scenario to test all the categories returned\u000aGiven order service is running\u000aWhen the service api <providedUrl> is invoked for order service with entity <entity>\u000aThen check the statusCode <statusCode> match response <response>\u000a\u000a\u000a",
+      "passed": true,
+      "started": 1540769025983,
+      "duration": 380
+    }
+  ],
+  "stepMatches": []
+}}

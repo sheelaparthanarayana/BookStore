@@ -1,0 +1,14 @@
+footer{
+    background-color: #3f3f3f;
+    color: #d5d5d5;
+    padding-top: 2rem;
+}
+.padding {
+    padding: 2rem;
+}
+.index-list-img {
+    height: 250px;
+    width: auto;
+    margin: auto;
+    display: block;
+}

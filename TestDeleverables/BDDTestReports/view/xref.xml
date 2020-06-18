@@ -1,0 +1,51 @@
+<xref>
+  <whenMade>1540769027709</whenMade>
+  <createdBy>JBehave</createdBy>
+  <metaFilter>-skip -ignore</metaFilter>
+  <meta/>
+  <stories>
+    <story>
+      <description>Ecom Bookstore Story</description>
+      <narrative>In order to communicate effectively to the business some functionality
+As a development team
+I want to use Behaviour-Driven Development
+</narrative>
+      <name>product_catalog_service_story.story</name>
+      <path>com/ecom/ServiceTests/product_catalog_service_story.story</path>
+      <html>com.ecom.ServiceTests.product_catalog_service_story.html</html>
+      <meta></meta>
+      <scenarios>Scenario:A scenario to test all the categories returned
+Given product service is running
+When the service api &lt;providedUrl&gt; is invoked
+Then check the statusCode &lt;statusCode&gt; and the response &lt;response&gt;
+
+
+</scenarios>
+      <passed>true</passed>
+      <started>1540769024466</started>
+      <duration>1513</duration>
+    </story>
+    <story>
+      <description>Ecom Bookstore Story</description>
+      <narrative>In order to communicate effectively to the business some functionality
+As a development team
+I want to use Behaviour-Driven Development
+</narrative>
+      <name>order_catalog_service_story.story</name>
+      <path>com/ecom/ServiceTests/order_catalog_service_story.story</path>
+      <html>com.ecom.ServiceTests.order_catalog_service_story.html</html>
+      <meta></meta>
+      <scenarios>Scenario:A scenario to test all the categories returned
+Given order service is running
+When the service api &lt;providedUrl&gt; is invoked for order service with entity &lt;entity&gt;
+Then check the statusCode &lt;statusCode&gt; match response &lt;response&gt;
+
+
+</scenarios>
+      <passed>true</passed>
+      <started>1540769025983</started>
+      <duration>380</duration>
+    </story>
+  </stories>
+  <stepMatches/>
+</xref>
